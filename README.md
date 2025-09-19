@@ -7,7 +7,7 @@ This repository contains operational runbooks that guide Akuity Intelligence's a
 ### ArgoCD Application Issues
 Runbooks for health, sync, and deployment issues surfaced through Argo CD:
 - **[argocd-app-degraded.md](./argocd/argocd-app-degraded.md)** - Application health degraded with failing resources
-- **[argocd-app-outof-sync.md](./argocd/argocd-app-outof-sync.md)** - Applications showing out-of-sync status
+- **[argocd-app-out-of-sync.md](./argocd/argocd-app-out-of-sync.md)** - Applications showing out-of-sync status
 - **[argocd-app-sync-failure.md](./argocd/argocd-app-sync-failure.md)** - Sync operations failing or timing out
 
 ### Infrastructure & Cluster Issues  
