@@ -1,23 +1,32 @@
 # Akuity Intelligence Runbooks
 
-This repository contains the example operational runbooks that Akuity Intelligence incident triggers when it detects degraded ArgoCD/Namespace resources. The documents are written for on-call responders so they can quickly triage issues, collaborate with engineers, and restore service health.
+This repository contains operational runbooks that guide Akuity Intelligence's automated incident response when it detects degraded ArgoCD Applications or Kubernetes Namespaces. Each runbook follows a structured approach with symptom identification, root cause analysis, and step-by-step remediation procedures.
 
-## Audience and Scope
-- Primary users are on-call SREs and platform engineers responding to degraded resource incidents raised by Akuity Intelligence.
-- Runbooks assume access to Akuity-managed Argo CD instances, Kubernetes clusters, and observability tooling (logs, metrics, events).
-- Each document highlights the actions that an automated assistant can safely take versus items that require explicit human approval.
+## Runbook Categories
 
-## How to Use These Runbooks
-- Start with the **General** section at the top of each runbook. It captures mandatory triage steps, Slack communication expectations, and the reminder to avoid making unauthorised changes.
-- Follow the remaining sections sequentially. They are organised by symptom → root cause hypotheses → validation steps → remediation guidance.
-- Update the `"PLEASE REPLACE"` placeholder in Slack callouts with the production incident channel that your team uses before automating notifications.
-- Modify based on the specific needs, and then import or copy&paste to the Akuity Intelligence runbook configuration.
+### ArgoCD Application Issues
+Runbooks for health, sync, and deployment issues surfaced through Argo CD:
+- **[argocd-app-degraded.md](./argocd/argocd-app-degraded.md)** - Application health degraded with failing resources
+- **[argocd-app-outof-sync.md](./argocd/argocd-app-outof-sync.md)** - Applications showing out-of-sync status
+- **[argocd-app-sync-failure.md](./argocd/argocd-app-sync-failure.md)** - Sync operations failing or timing out
 
-## Repository Layout
-- `argocd/` – Health, sync, and deployment issues surfaced through Argo CD (e.g. degraded health, out-of-sync apps, sync failures).
-- `infra/` – Cluster-level infrastructure signals such as pending pods, PVC binding errors, and time drift between nodes.
-- `networking/` – Network dataplane and service connectivity diagnostics.
-- `pod-issues/` – Per-pod reliability scenarios including image pull failures, pod evictions, general health anomalies, etc.
-- `security/` – Access control and policy denials that block workloads.
+### Infrastructure & Cluster Issues  
+Cluster-level infrastructure problems and resource constraints:
+- **[pod-pending-scheduling.md](./infra/pod-pending-scheduling.md)** - Pods stuck in pending due to scheduling constraints
+- **[pvc-binding-failure.md](./infra/pvc-binding-failure.md)** - Persistent volume claim binding failures
+- **[time-drift.md](./infra/time-drift.md)** - Time synchronization issues between cluster nodes
 
-For questions or missing scenarios, feel free to submit example runbooks based on your senarios, reach out to Akuity or file an issue in this repository.
+### Network & Connectivity Issues
+Network dataplane and service connectivity diagnostics:
+- **[cni-networking.md](./networking/cni-networking.md)** - CNI and pod networking problems
+- **[service-connectivity.md](./networking/service-connectivity.md)** - Service discovery and connectivity failures
+
+### Pod-Level Problems
+Per-pod reliability scenarios and runtime issues:
+- **[image-pull-failure.md](./pod-issues/image-pull-failure.md)** - Container image pull failures and registry issues
+- **[pod-evictions.md](./pod-issues/pod-evictions.md)** - Pod evictions due to resource pressure
+- **[pod-health-issues.md](./pod-issues/pod-health-issues.md)** - Pod health check failures and readiness issues
+
+### Security & Access Control
+Access control and policy denials that block workloads:
+- **[rbac-denials.md](./security/rbac-denials.md)** - RBAC permission denials and authorization failures
