@@ -3,8 +3,6 @@ title: Platform Integrity Reports
 schedule: "every day"
 ---
 
-## Platform Integrity Reports
-
 - Summarize all incidents from the last 24 hours
 - Identify stuck resources pending deletion
 - Summarize all open CVE's from the Images section
