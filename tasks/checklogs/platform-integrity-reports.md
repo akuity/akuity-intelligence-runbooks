@@ -3,8 +3,8 @@ title: Platform Integrity Reports
 schedule: "every day"
 ---
 
-- Summarize all incidents from the last 24 hours
-- Identify stuck resources pending deletion
-- Summarize all open CVE's from the Images section
-- Summarize all deprecated API's
-- Format the summary for all of this in concise markdown or plain text
+- Provide a summary of all incidents from the past 24 hours
+- Identify any resources currently stuck in a deletion state
+- Summarize all open CVEs listed under the Images section
+- Summarize all deprecated APIs
+- Present the final summary in concise Markdown or plain text
