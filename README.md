@@ -1,5 +1,8 @@
 # Akuity Intelligence Runbooks
 
+> [!WARNING]
+> ARCHIVED - This project is no longer maintained, and please find examples of runbooks and tasks in [akuity-intelligence-examples](https://github.com/akuity/akuity-intelligence-examples).
+
 This repository contains operational runbooks that guide Akuity Intelligence's automated incident response when it detects degraded ArgoCD Applications or Kubernetes Namespaces. Each runbook follows a structured approach with symptom identification, root cause analysis, and step-by-step remediation procedures.
 
 ## Runbook Categories
